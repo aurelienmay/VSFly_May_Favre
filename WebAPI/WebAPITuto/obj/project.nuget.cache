@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c4H/GkfHtHiv2kLltk6ffOSKrKEVOj/pQ3Qk4GJz4oB19XlIa5vErsPH5oqXtLYAqK4umHWXCxBOPOYQLdwFuw==",
+  "dgSpecHash": "mLSKM4fvDVTy19IlKXVcEVLIjFyH1SMfu7Z1pgEw8jEfpjTnJy/xmmN+U7xi68iR62uJ+SKyIkojTPpLT6YZLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aurel\\source\\repos\\VSFly_May_Favre\\WebAPITuto\\WebAPITuto.csproj",
+  "projectFilePath": "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\WebAPITuto\\WebAPITuto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aurel\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\aurel\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

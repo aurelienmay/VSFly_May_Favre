@@ -26,7 +26,7 @@ namespace webapiclient2.Controllers
 
         public async Task<IActionResult> IndexAsync()
         {
-            var data = await ApiClientFactory.Instance.GetTodoItems();
+            var data = await ApiClientFactory.Instance.GetFlights();
             return View(data);
         }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B4I2Xjp8sQbG6HoHWtV63SI9HDqlXhnzpu4u9uBRKgoLHOs1UgANrB3c750NvTEO3PLdTisgC1d8SHR20p7F6A==",
+  "dgSpecHash": "qgmIGvJCxt/3RpANnJvdP6MSHkNqCoZ9lewKcvUgCIwXkvzDjLqgjhfBODeD0nd16tSxowW+zqqH1K5wD2XVSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aurel\\source\\repos\\VSFly_May_Favre\\EFCoreApp2020\\EFCoreApp2020.csproj",
+  "projectFilePath": "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aurel\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\aurel\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

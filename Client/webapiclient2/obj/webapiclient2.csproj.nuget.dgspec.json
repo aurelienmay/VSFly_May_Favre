@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aurel\\source\\repos\\webapiclient2\\webapiclient2\\webapiclient2.csproj": {}
+    "C:\\Users\\aurel\\source\\repos\\VSFly_May_Favre\\Client\\webapiclient2\\webapiclient2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aurel\\source\\repos\\webapiclient2\\webapiclient2\\webapiclient2.csproj": {
+    "C:\\Users\\aurel\\source\\repos\\VSFly_May_Favre\\Client\\webapiclient2\\webapiclient2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aurel\\source\\repos\\webapiclient2\\webapiclient2\\webapiclient2.csproj",
+        "projectUniqueName": "C:\\Users\\aurel\\source\\repos\\VSFly_May_Favre\\Client\\webapiclient2\\webapiclient2.csproj",
         "projectName": "webapiclient2",
-        "projectPath": "C:\\Users\\aurel\\source\\repos\\webapiclient2\\webapiclient2\\webapiclient2.csproj",
+        "projectPath": "C:\\Users\\aurel\\source\\repos\\VSFly_May_Favre\\Client\\webapiclient2\\webapiclient2.csproj",
         "packagesPath": "C:\\Users\\aurel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aurel\\source\\repos\\webapiclient2\\webapiclient2\\obj\\",
+        "outputPath": "C:\\Users\\aurel\\source\\repos\\VSFly_May_Favre\\Client\\webapiclient2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,7 +43,7 @@
           "dependencies": {
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.3, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
