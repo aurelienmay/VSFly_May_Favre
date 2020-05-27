@@ -13,19 +13,19 @@ namespace EFCoreApp2020
 
             CreateDatabase();
 
-            NewFlights(); // create the flight n° 1 + n° 2 + n° 3
+            //NewFlights(); // create the flight n° 1 + n° 2 + n° 3
 
             PrintFlights();
 
             //NewBooking();
 
-            UpdateFlights(); // use the flight n° 1
+            //UpdateFlights(); // use the flight n° 1
 
-            PrintFlights();
+            //PrintFlights();
 
-            DeleteFlights(); // delete the last flight
+            //DeleteFlights(); // delete the last flight
 
-            PrintFlights();
+            //PrintFlights();
         }
 
         private static void CreateDatabase()

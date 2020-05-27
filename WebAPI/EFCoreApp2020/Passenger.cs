@@ -11,9 +11,7 @@ namespace EFCoreApp2020
         [Key]
         public int PassengerID { get; set; }
 
-        public string Surname { get; set; }
-
-        public string GivenName { get; set; }
+        public string Username { get; set; }
 
         public int Weight { get; set; }
     }
