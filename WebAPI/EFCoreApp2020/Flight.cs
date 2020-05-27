@@ -24,10 +24,6 @@ namespace EFCoreApp2020
         [Required]
         public short? Seats { get; set; }
 
-        [ForeignKey("PilotId")]
-        public virtual Pilot Pilot { get; set; }
-        public int PilotId { get; set; }
-
         public virtual ICollection<Booking> BookingSet { get; set; }
     }
 }

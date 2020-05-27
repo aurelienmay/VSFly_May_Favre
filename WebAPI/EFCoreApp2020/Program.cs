@@ -13,8 +13,6 @@ namespace EFCoreApp2020
 
             CreateDatabase();
 
-            NewPilots();
-
             NewFlights(); // create the flight n° 1 + n° 2 + n° 3
 
             PrintFlights();
@@ -28,8 +26,6 @@ namespace EFCoreApp2020
             DeleteFlights(); // delete the last flight
 
             PrintFlights();
-
-            PrintPilots();
         }
 
         private static void CreateDatabase()
@@ -42,33 +38,6 @@ namespace EFCoreApp2020
                     Console.WriteLine("Database has been created !");
             }
         }
-
-        public static void NewPilots() {
-            using (var ctx = new WWWingsContext()) {
-                Pilot p1 = new Pilot { Surname = "Bono", GivenName = "Jean", Salary = 23000 };
-                ctx.PilotSet.Add(p1);
-
-                Pilot p2 = new Pilot { Surname = "Tilde", GivenName = "Pierre", Salary = 4800 };
-                ctx.PilotSet.Add(p2);   
-
-                ctx.SaveChanges();
-            }
-        }
-
-        //private static void NewBooking()
-        //{
-        //    using (var ctx = new WWWingsContext())
-        //    {
-        //        ctx.BookingSet.Add(new Booking { FlightNo = 1, PassengerID = 1 });
-
-        //        Flight f = ctx.FlightSet.Find(2); 
-
-        //        f.BookingSet.Add(new Booking { FlightNo = f.FlightNo, PassengerID = 1 });
-
-        //        ctx.SaveChanges();
-        //    }
-        //}
-
         private static void UpdateFlights()
         {
             using (var ctx = new WWWingsContext()) {
@@ -105,39 +74,15 @@ namespace EFCoreApp2020
             {
                 // add a Flight in FlightSet .... with Linq language 
                 Flight flight1 = new Flight { Departure = "GVA", Destination = "LAX", Seats = 350, Date = new DateTime() };
-                flight1.PilotId = 1;
                 ctx.FlightSet.Add(flight1);
 
                 Flight flight2 = new Flight { Departure = "LAX", Destination = "GVA", Seats = 350, Date = new DateTime() };
-                flight2.PilotId = 2;
                 ctx.FlightSet.Add(flight2);
 
                 Flight flight3 = new Flight { Departure = "GVA", Destination = "MLN", Seats = 100, Date = new DateTime() };
-                flight3.Pilot = ctx.PilotSet.Find(2);
                 ctx.FlightSet.Add(flight3);
 
                 ctx.SaveChanges();
-            }
-        }
-
-        private static void PrintPilots()
-        {
-            Console.WriteLine("--------------------------------------------------------");
-
-            using (var ctx = new WWWingsContext())
-            {
-                var q = from p in ctx.PilotSet.Include(x => x.FlightAsPilotSet)
-                        select p;
-
-                foreach (Pilot p in q)
-                {
-                    Console.WriteLine("{0} {1} {2} {3}", p.Surname, p.GivenName, p.Salary, p.FlightAsPilotSet.Count());
-
-                    foreach (Flight f in p.FlightAsPilotSet)
-                    {
-                        Console.WriteLine(" - {0} {1} {2}", f.Departure, f.Destination, f.Seats);
-                    }
-                }
             }
         }
 
@@ -155,10 +100,8 @@ namespace EFCoreApp2020
 
                 foreach (Flight f in q)
                 {
-                    // explicit loading
-                    ctx.Entry(f).Reference(x => x.Pilot).Load();
 
-                    Console.WriteLine("{0} {1} {2} {3}", f.FlightNo, f.Destination, f.Seats, f.Pilot.Surname);
+                    Console.WriteLine("{0} {1} {2}", f.FlightNo, f.Destination, f.Seats);
 
                 }
             }
