@@ -24,17 +24,17 @@ namespace EFCoreApp2020
             builder.Entity<Booking>().HasKey(x => new { x.FlightNo, x.PassengerID });
 
             // mapping many to many relationship
-            //builder.Entity<Booking>()
-            //    .HasOne(x => x.Flight)
-            //    .WithMany(x => x.BookingSet)
-            //    .HasForeignKey(x => x.FlightNo)
-            //    .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Booking>()
+                .HasOne(x => x.Flight)
+                .WithMany(x => x.BookingSet)
+                .HasForeignKey(x => x.FlightNo)
+                .OnDelete(DeleteBehavior.Restrict);
 
-            //builder.Entity<Booking>()
-            //    .HasOne(x => x.Passenger)
-            //    .WithMany(x => x.BookingSet)
-            //    .HasForeignKey(x => x.PassengerID)
-            //    .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Booking>()
+                .HasOne(x => x.Passenger)
+                .WithMany(x => x.BookingSet)
+                .HasForeignKey(x => x.PassengerID)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

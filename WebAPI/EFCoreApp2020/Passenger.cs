@@ -14,5 +14,7 @@ namespace EFCoreApp2020
         public string Username { get; set; }
 
         public int Weight { get; set; }
+
+        public virtual ICollection<Booking> BookingSet { get; set; }
     }
 }
