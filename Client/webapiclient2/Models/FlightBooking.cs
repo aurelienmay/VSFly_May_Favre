@@ -1,20 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace webapiclient2.Models
 {
-    public class Flight
+    public class FlightBooking
     {
-        public Flight() { }
-
         [Key]
         public int FlightNo { get; set; }
 
-        [StringLength(50), MinLength(3)]
         public string Departure { get; set; }
 
         [StringLength(50), MinLength(3)]
@@ -27,10 +23,10 @@ namespace webapiclient2.Models
         [Required]
         public short? Seats { get; set; }
 
-        //[ForeignKey("PilotId")]
-        //public virtual Pilot Pilot { get; set; }
-        //public int PilotId { get; set; }
+        [Required]
+        public float TicketPrice { get; set; }
 
-        public virtual ICollection<Booking> BookingSet { get; set; }
+        [Required]
+        public string Username { get; set; }
     }
 }
