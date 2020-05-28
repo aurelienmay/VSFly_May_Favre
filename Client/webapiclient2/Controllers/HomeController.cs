@@ -36,7 +36,7 @@ namespace webapiclient2.Controllers
             return View(data);
         }
 
-        public async Task<IActionResult> BookThisFlight(int flightNo, string username)
+        public async Task<IActionResult> BookThisFlight(string txtName, int flightNo)
         {
             //DO THE POST ACTION
 
