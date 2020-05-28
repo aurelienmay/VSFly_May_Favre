@@ -33,12 +33,28 @@ namespace webapiclient2.Controllers
         public async Task<IActionResult> FlightDetails(int id)
         {
             var data = await ApiClientFactory.Instance.GetFlight(id);
+
+            // Get the ticket price by flightNo
+            data.TicketPrice = 120;
+
             return View(data);
         }
 
         public async Task<IActionResult> BookThisFlight(string txtName, int flightNo)
         {
-            //DO THE POST ACTION
+            if (txtName == null)
+            {
+                //ViewBag.ErrorMessage = "invalid username";
+                // Reload the page
+                return RedirectToAction("FlightDetails", "Home", new { id = flightNo });
+            }
+            // Check the username
+
+            // Get the id by username
+
+            // DO THE POST ACTION in Bookset
+
+            // -1 in available seats
 
             return RedirectToAction("Index", "Home");
         }

@@ -23,8 +23,10 @@ namespace webapiclient2.Models
         [Required]
         public short? Seats { get; set; }
 
+        [Required]
         public float TicketPrice { get; set; }
 
+        [Required]
         public string Username { get; set; }
     }
 }
