@@ -21,12 +21,12 @@ namespace EFCoreApp2020
         [Required]
         public DateTime Date { get; set; }
         [Required]
-        public short AvailableSeats { get; set; }
+        public int AvailableSeats { get; set; }
         [Required]
         public float BasePrice { get; set; }
 
         [Required]
-        public short Seats { get; set; }
+        public int Seats { get; set; }
 
         public virtual ICollection<Booking> BookingSet { get; set; }
     }
