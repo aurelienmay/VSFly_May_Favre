@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<webapiclient2.Models.Flight>
 
 @{
-    ViewData["Title"] = "Flights";
+    ViewData["Title"] = "Index2";
 }
 
-<h1>Flights</h1>
+<h1>Index2</h1>
 
-@*<p>
+<p>
     <a asp-action="Create">Create New</a>
-</p>*@
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -23,6 +23,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvailableSeats)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Seats)
@@ -46,12 +49,13 @@
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.AvailableSeats)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Seats)
             </td>
             <td>
-                @Html.ActionLink("Book this flight", "Book", new { /* id=item.PrimaryKey */ }) 
-                @*|@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                <input type="button" class="btn btn-info btn-sm active" value="Book this flight" onclick="@("window.location.href='" + @Url.Action("FlightDetails", "Home", new { id = item.FlightNo }) + "'");" />
             </td>
         </tr>
 }

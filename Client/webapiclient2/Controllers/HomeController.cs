@@ -30,6 +30,19 @@ namespace webapiclient2.Controllers
             return View(data);
         }
 
+        public async Task<IActionResult> FlightDetails(int id)
+        {
+            var data = await ApiClientFactory.Instance.GetFlight(id);
+            return View(data);
+        }
+
+        public async Task<IActionResult> BookThisFlight(int flightNo, string username)
+        {
+            //DO THE POST ACTION
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult Privacy()
         {
             return View();

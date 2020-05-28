@@ -329,3 +329,4 @@ C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netco
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.pdb
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.genruntimeconfig.cache
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index_ORI.cshtml.g.cs
+C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\FlightDetails.cshtml.g.cs
