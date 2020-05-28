@@ -18,13 +18,15 @@ namespace EFCoreApp2020
 
         [StringLength(50), MinLength(3)]
         public string Destination { get; set; }
-
+        [Required]
         public DateTime Date { get; set; }
-
-        public short? AvailableSeats { get; set; }
+        [Required]
+        public short AvailableSeats { get; set; }
+        [Required]
+        public float BasePrice { get; set; }
 
         [Required]
-        public short? Seats { get; set; }
+        public short Seats { get; set; }
 
         public virtual ICollection<Booking> BookingSet { get; set; }
     }

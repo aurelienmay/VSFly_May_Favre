@@ -34,6 +34,17 @@ namespace WebAPITuto.Controllers
         {
             var flight = await _context.FlightSet.FindAsync(id);
 
+            DateTime today = DateTime.Today;
+            TimeSpan interval = flight.Date - today;
+            int freeplacepercent = flight.AvailableSeats / flight.Seats * 100;
+            if(freeplacepercent >80)
+            flight.BasePrice *= (float)1.5;
+            if(freeplacepercent <20 && today.Month)
+
+
+            
+
+
             if (flight == null)
             {
                 return NotFound();
