@@ -25,7 +25,7 @@ namespace WebAPITuto.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Flight>>> GetFlights()
         {
-            return await _context.FlightSet.ToListAsync();
+            return await _context.FlightSet.AsQueryable().Where(flight => flight.AvailableSeats != 0).ToListAsync();
         }
 
         // GET: api/Flight/5
