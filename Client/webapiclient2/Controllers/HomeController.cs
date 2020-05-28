@@ -24,7 +24,7 @@ namespace webapiclient2.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
             var data = await ApiClientFactory.Instance.GetFlights();
             return View(data);

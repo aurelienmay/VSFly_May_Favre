@@ -10,6 +10,8 @@ namespace EFCoreApp2020
 
         public int PassengerID { get; set; }
 
+        public float TicketPrice { get; set; }
+
         public virtual Flight Flight { get; set; }
 
         public virtual Passenger Passenger { get; set; }

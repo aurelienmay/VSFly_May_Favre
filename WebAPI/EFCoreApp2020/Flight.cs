@@ -21,6 +21,8 @@ namespace EFCoreApp2020
 
         public DateTime Date { get; set; }
 
+        public short? AvailableSeats { get; set; }
+
         [Required]
         public short? Seats { get; set; }
 
