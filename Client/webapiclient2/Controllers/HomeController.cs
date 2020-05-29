@@ -34,8 +34,7 @@ namespace webapiclient2.Controllers
         {
             var data = await ApiClientFactory.Instance.GetFlight(id);
 
-            // Get the ticket price by flightNo
-            data.TicketPrice = 120;
+            //data.TicketPrice = 120;
 
             return View(data);
         }
