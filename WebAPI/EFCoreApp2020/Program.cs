@@ -11,11 +11,22 @@ namespace EFCoreApp2020
         {
             Console.WriteLine("Hello World!");
 
-            CreateDatabase();
+            DateTime today = DateTime.Today;
+
+            Console.WriteLine(today);
+
+            int betweenDate = Math.Abs((today.Year * 12 + today.Month) - (2020 * 12 + 06));
+
+            Console.WriteLine(betweenDate);
+
+            // int betweenDate = (today.Year * 12 + today.Month) - (2020 * 12 + flight.Date.Year);
+
+
+            //CreateDatabase();
 
             //NewFlights(); // create the flight n° 1 + n° 2 + n° 3
 
-            PrintFlights();
+            //PrintFlights();
 
             //NewBooking();
 
