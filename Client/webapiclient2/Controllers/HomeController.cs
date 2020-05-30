@@ -34,24 +34,37 @@ namespace webapiclient2.Controllers
         {
             var data = await ApiClientFactory.Instance.GetFlight(id);
 
+            // Get the username error message (if booked with wrong username)
+            ViewBag.ErrorMessage = Convert.ToString(TempData["invalidUsername"]);
+
             //data.TicketPrice = 120;
 
             return View(data);
         }
 
-        public async Task<IActionResult> BookThisFlight(string txtName, int flightNo)
+        public async Task<IActionResult> BookThisFlight(string username, int flightNo, float basePrice)
         {
-            if (txtName == null)
+            // Check username validity
+            if (username == null) 
             {
-                //ViewBag.ErrorMessage = "invalid username";
-                // Reload the page
+                // Reload the page with an error
+                TempData["invalidUsername"] = "invalidUsername";
                 return RedirectToAction("FlightDetails", "Home", new { id = flightNo });
             }
-            // Check the username
 
-            // Get the id by username
+            // Get the passengerID by username
+            int passengerID = await ApiClientFactory.Instance.GetPassengerUID(username);
+
+            // Check the username validity
+            if (passengerID == 0)
+            {
+                // Reload the page with an error
+                TempData["invalidUsername"] = "invalidUsername";
+                return RedirectToAction("FlightDetails", "Home", new { id = flightNo });
+            }
 
             // DO THE POST ACTION in Bookset
+
 
             // -1 in available seats
 

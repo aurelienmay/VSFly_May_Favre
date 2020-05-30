@@ -10,7 +10,8 @@ namespace WebAPITuto.Models
     public class VSFlightContext : DbContext
     {
         public DbSet<Flight> FlightSet { get; set; }
-        public object BookingSet { get; internal set; }
+        public DbSet<Passenger> Passenger { get; set; }
+        public DbSet<Booking> BookingSet { get; internal set; }
 
         public static string ConnectionString { get; set; } = @"Server=(localDB)\MSSQLLocalDB;Database=WWWings_2020Step1;Trusted_Connection=True;MultipleActiveResultSets=True;App=EFCoreApp2020";
 

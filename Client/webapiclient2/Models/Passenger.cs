@@ -1,23 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace EFCoreApp2020
+namespace webapiclient2.Models
 {
     public class Passenger
     {
+        public Passenger() { }
+
         [Key]
         public int PassengerID { get; set; }
 
         public string Username { get; set; }
-
-        public virtual ICollection<Booking> BookingSet { get; set; }
-
-        public static explicit operator int(Passenger v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
