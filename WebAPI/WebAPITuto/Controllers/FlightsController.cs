@@ -29,7 +29,7 @@ namespace WebAPITuto.Controllers
             return await _context.FlightSet.AsQueryable().Where(flight => flight.AvailableSeats != 0).ToListAsync();
         }
 
-        // GET: api/Flight/5
+        // GET: api/Flights/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Flight>> GetFlight(int id)
         {
@@ -50,12 +50,12 @@ namespace WebAPITuto.Controllers
                     flight.BasePrice *= (float)1.5;
                 return flight;
                 }
-                if (freeplacepercent > 80 && betweenDate < 2)
+                if (freeplacepercent > 80 && betweenDate < 2 && betweenDate >= 1)
                 {
                     flight.BasePrice *= (float)0.8;
                 return flight;
-            }
-                if (freeplacepercent < 50 || freeplacepercent >= 20 && betweenDate < 1)
+                }
+                if (freeplacepercent > 50 && betweenDate < 1)
                 {
                     flight.BasePrice *= (float)0.7;
                 return flight;

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj": {}
+    "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj": {
+    "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj",
+        "projectUniqueName": "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj",
         "projectName": "EFCoreApp2020",
-        "projectPath": "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj",
-        "packagesPath": "C:\\Users\\aurel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\obj\\",
+        "projectPath": "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj",
+        "packagesPath": "C:\\Users\\leo10\\.nuget\\packages\\",
+        "outputPath": "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\aurel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\leo10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
