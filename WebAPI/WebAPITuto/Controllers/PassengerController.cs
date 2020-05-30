@@ -23,9 +23,9 @@ namespace WebAPITuto.Controllers
 
         // GET: api/Passenger
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<IEnumerable<Passenger>>> GetPassengers()
         {
-            return new string[] { "value1", "value2" };
+            return await _context.Passenger.ToListAsync();
         }
 
         // GET: api/Passenger/username

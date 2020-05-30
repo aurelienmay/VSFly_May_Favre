@@ -63,10 +63,16 @@ namespace webapiclient2.Controllers
                 return RedirectToAction("FlightDetails", "Home", new { id = flightNo });
             }
 
-            // DO THE POST ACTION in Bookset
+            // DO THE POST ACTION in Booking
+            Booking booking = new Booking();
+            booking.FlightNo = flightNo;
+            booking.PassengerID = passengerID;
+            booking.TicketPrice = basePrice;
 
+            await ApiClientFactory.Instance.SaveBooking(booking);
 
             // -1 in available seats
+
 
             return RedirectToAction("Index", "Home");
         }

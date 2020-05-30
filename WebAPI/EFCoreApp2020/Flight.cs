@@ -28,6 +28,6 @@ namespace EFCoreApp2020
         [Required]
         public int Seats { get; set; }
 
-        public virtual ICollection<Booking> BookingSet { get; set; }
+        //public virtual ICollection<Booking> BookingSet { get; set; }
     }
 }

@@ -29,6 +29,13 @@ namespace webapiclient2
             return await GetAsync<int>(requestUrl);
         }
 
+        public async Task<Message<Booking>> SaveBooking(Booking booking)
+        {
+            var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                "Booking/"));
+            return await PostAsync<Booking>(requestUrl, booking);
+        }
+
 
         public async Task<List<TodoItem>> GetTodoItems()
         {
