@@ -39,6 +39,7 @@ namespace webapiclient2
         /// <summary>  
         /// Common method for making POST calls  
         /// </summary>  
+        /// POST
         private async Task<Message<T>> PostAsync<T>(Uri requestUrl, T content)
         {
             var response = await _httpClient.PostAsync(requestUrl.ToString(), CreateHttpContent<T>(content));
@@ -52,6 +53,16 @@ namespace webapiclient2
             response.EnsureSuccessStatusCode();
             var data = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<Message<T1>>(data);
+        }
+
+        /// PUT
+        private async Task<T> PutAsync<T>(Uri requestUrl, T content)
+        {
+            //_httpClient.BaseAddress = new Uri("https://localhost:44378/");
+            var response = await _httpClient.PutAsync(requestUrl.ToString(), CreateHttpContent<T>(content));
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadAsStringAsync();
+            return default(T);
         }
 
         private Uri CreateRequestUri(string relativePath, string queryString = "")

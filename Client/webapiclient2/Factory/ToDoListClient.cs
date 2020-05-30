@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -34,6 +35,15 @@ namespace webapiclient2
             var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
                 "Booking/"));
             return await PostAsync<Booking>(requestUrl, booking);
+        }
+
+        public async Task PutFlight(int id, Flight flight)
+        {
+            var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                "Flight/" + id));
+            await PutAsync<Flight>(requestUrl, flight);
+
+            //return null;
         }
 
 
