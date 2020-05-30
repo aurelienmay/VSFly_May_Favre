@@ -28,11 +28,53 @@ namespace WebAPITuto.Controllers
             return await _context.Booking.ToListAsync();
         }
 
-        // GET: api/Booking/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        
+        // GET: api/Booking/totalprice/1
+        [HttpGet("totalprice/{id}")]
+        public string GetTotalPrice(int id)
         {
-            return "value";
+            float totalprice = 0;
+            using (var ctx = new VSFlightContext())
+            {
+                // Linq
+                // needs using System.Linq;
+                var q = from f in ctx.Booking
+                        where f.FlightNo == id
+                        select f;
+
+                foreach (Booking f in q)
+                {
+                    totalprice += f.TicketPrice;
+                }
+                return "The total price for the flight No " + id + " is: " + totalprice;
+            }
+        }
+
+        // GET: api/Booking/average/1
+        [HttpGet("average/{destination}")]
+        public string Get(string destination)
+        {
+            float average = 0;
+            int sum = 0;
+            using (var ctx = new VSFlightContext())
+            {
+                // Linq
+                // needs using System.Linq;
+                var q = from f in ctx.Booking
+                        join g in ctx.FlightSet on f.FlightNo equals g.FlightNo
+                        where g.Destination == destination
+                        select f;
+
+                foreach (Booking f in q)
+                {
+                    average += f.TicketPrice;
+                    sum++;
+                }
+
+                average /= sum;
+
+                return "The average price for the destination " + destination +" is: " + average+" CHF";
+            }
         }
 
         // POST: api/Booking
