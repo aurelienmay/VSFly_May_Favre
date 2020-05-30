@@ -27,6 +27,9 @@ namespace webapiclient2.Models
         [Required]
         public short? Seats { get; set; }
 
+        [Required]
+        public float BasePrice { get; set; }
+
         //[ForeignKey("PilotId")]
         //public virtual Pilot Pilot { get; set; }
         //public int PilotId { get; set; }

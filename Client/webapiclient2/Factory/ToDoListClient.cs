@@ -8,13 +8,6 @@ namespace webapiclient2
 {
     public partial class ApiClient
     {
-        public async Task<List<TodoItem>> GetTodoItems()
-        {
-            var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
-                "TodoItems/"));
-            return await GetAsync<List<TodoItem>>(requestUrl);
-        }
-
         public async Task<List<Flight>> GetFlights()
         {
             var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
@@ -22,13 +15,27 @@ namespace webapiclient2
             return await GetAsync<List<Flight>>(requestUrl);
         }
 
-        public async Task<FlightBooking> GetFlight(int id)
+        public async Task<Flight> GetFlight(int id)
         {
             var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
                 "Flights/" + id));
-            return await GetAsync<FlightBooking>(requestUrl);
+            return await GetAsync<Flight>(requestUrl);
         }
 
+        public async Task<int> GetPassengerUID(string username)
+        {
+            var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                "Passenger/" + username));
+            return await GetAsync<int>(requestUrl);
+        }
+
+
+        public async Task<List<TodoItem>> GetTodoItems()
+        {
+            var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                "TodoItems/"));
+            return await GetAsync<List<TodoItem>>(requestUrl);
+        }
         public async Task<Message<TodoItem>> SaveTodoItem(TodoItem model)
         {
             var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
