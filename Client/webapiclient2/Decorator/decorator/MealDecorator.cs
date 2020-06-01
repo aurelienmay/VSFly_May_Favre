@@ -7,7 +7,7 @@ namespace FlightDecorator.decorator
 {
     class MealDecorator : ExtrasDecorator
     {
-        protected static string DESCRIPTION = "meal";
+        protected static string DESCRIPTION = "accompanied by a tasty meal";
         protected static int PRICE = 20;
 
         private component.FlightClass flight = null;
@@ -25,7 +25,7 @@ namespace FlightDecorator.decorator
 
         public override string getDescription()
         {
-            return this.flight.getDescription() + ", " + DESCRIPTION;
+            return this.flight.getDescription() + " " + DESCRIPTION;
         }
 
         public override int getCost()

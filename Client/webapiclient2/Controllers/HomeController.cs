@@ -52,7 +52,7 @@ namespace webapiclient2.Controllers
             return View(data);
         }
 
-        public async Task<IActionResult> FlyDetails(int extraPrice, string description, float ticketPrice, string user)
+        public async Task<IActionResult> TicketDetails(int extraPrice, string description, float ticketPrice, string user)
         {
             TicketDetails details = new TicketDetails();
             details.Description = description;
@@ -129,7 +129,7 @@ namespace webapiclient2.Controllers
             Flight flight = await ApiClientFactory.Instance.GetFlight(flightNo);
             await ApiClientFactory.Instance.PutFlight(flightNo, flight);
 
-            return RedirectToAction("FlyDetails", "Home", new { extraPrice = fly.getCost(), description = fly.getDescription(), ticketPrice = basePrice, user = username });
+            return RedirectToAction("TicketDetails", "Home", new { extraPrice = fly.getCost(), description = fly.getDescription(), ticketPrice = basePrice, user = username });
         }
 
         public IActionResult Privacy()

@@ -7,7 +7,7 @@ namespace FlightDecorator.component
     class FlightFirstClass : FlightClass
     {
         protected static int PRICE = 100;
-        protected static string DESCRIPTION = "First class";
+        protected static string DESCRIPTION = "You will be in First class";
 
         public override string getDescription()
         {

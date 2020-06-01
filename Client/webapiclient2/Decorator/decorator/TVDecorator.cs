@@ -7,7 +7,7 @@ namespace FlightDecorator.decorator
 {
     class TVDecorator : ExtrasDecorator
     {
-        protected static string DESCRIPTION = "tv";
+        protected static string DESCRIPTION = "and a TV to entertain you during the flight.";
         protected static int PRICE = 10;
 
         private component.FlightClass flight = null;
@@ -24,7 +24,7 @@ namespace FlightDecorator.decorator
 
         public override string getDescription()
         {
-            return this.flight.getDescription() + ", " + DESCRIPTION;
+            return this.flight.getDescription() + " " + DESCRIPTION;
         }
     }
 }

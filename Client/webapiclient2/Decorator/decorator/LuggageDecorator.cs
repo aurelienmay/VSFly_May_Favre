@@ -7,10 +7,10 @@ namespace FlightDecorator.decorator
 {
     class LuggageDecorator : ExtrasDecorator
     {
-        protected static string DESCRIPTION = "luggage";
+        protected static string DESCRIPTION = "with one luggage";
         protected static int PRICE = 40;
 
-        private component.FlightClass flight = null;
+        private FlightClass flight = null;
 
         public LuggageDecorator(component.FlightClass flight)
         {
@@ -24,7 +24,7 @@ namespace FlightDecorator.decorator
 
         public override string getDescription()
         {
-            return this.flight.getDescription() + ", " + DESCRIPTION;
+            return this.flight.getDescription() + " " + DESCRIPTION;
         }
     }
 }

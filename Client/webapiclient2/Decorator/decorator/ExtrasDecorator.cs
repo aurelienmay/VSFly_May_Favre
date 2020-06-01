@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FlightDecorator.decorator
 {
-    abstract class ExtrasDecorator : component.FlightClass
+    abstract class ExtrasDecorator : FlightClass
     {
         //public abstract string getDescription();
     }
