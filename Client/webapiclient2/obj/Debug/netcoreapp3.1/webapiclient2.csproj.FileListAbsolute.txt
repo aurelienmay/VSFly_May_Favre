@@ -302,7 +302,6 @@ C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\bin\Debug\netco
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.csprojAssemblyReference.cache
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.csproj.CoreCompileInputs.cache
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.RazorAssemblyInfo.cache
@@ -330,3 +329,5 @@ C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netco
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.genruntimeconfig.cache
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index_ORI.cshtml.g.cs
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\FlightDetails.cshtml.g.cs
+C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\FlyDetails.cshtml.g.cs
+C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.csprojAssemblyReference.cache

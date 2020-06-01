@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using FlightDecorator.component;
+using FlightDecorator.decorator;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using webapiclient2.Factory;
@@ -37,13 +40,64 @@ namespace webapiclient2.Controllers
             // Get the username error message (if booked with wrong username)
             ViewBag.ErrorMessage = Convert.ToString(TempData["invalidUsername"]);
 
-            //data.TicketPrice = 120;
+            List<SelectListItem> ObjList = new List<SelectListItem>()
+            {
+                new SelectListItem { Text = "Second", Value = "1" },
+                new SelectListItem { Text = "Business", Value = "2" },
+                new SelectListItem { Text = "First", Value = "3" },
+            };
+            //Assigning generic list to ViewBag
+            ViewBag.Locations = ObjList;
 
             return View(data);
         }
 
-        public async Task<IActionResult> BookThisFlight(string username, int flightNo, float basePrice)
+        public async Task<IActionResult> FlyDetails(int extraPrice, string description, float ticketPrice, string user)
         {
+            TicketDetails details = new TicketDetails();
+            details.Description = description;
+            details.price = ticketPrice;
+            details.extraPrice = extraPrice;
+            details.username = user;
+            details.totalPrice = ticketPrice + extraPrice;
+
+            return View(details);
+        }
+
+        public async Task<IActionResult> BookThisFlight(string username, int flightNo, float basePrice, int ObjList, bool luggage, bool meal, bool tv)
+        {
+            // DECORATOR
+            FlightClass fly = new FlightBusinessClass();
+            switch (ObjList)
+            {
+                case 3:
+                    fly = new FlightFirstClass();
+                    break;
+
+                case 2:
+                    fly = new FlightBusinessClass();
+                    break;
+
+                case 1:
+                    fly = new FlightSecondClass();
+                    break;
+            }
+
+            if (luggage)
+            {
+                fly = new LuggageDecorator(fly);
+            }
+
+            if (meal)
+            {
+                fly = new MealDecorator(fly);
+            }
+
+            if (tv)
+            {
+                fly = new TVDecorator(fly);
+            }
+
             // Check username validity
             if (username == null) 
             {
@@ -75,7 +129,7 @@ namespace webapiclient2.Controllers
             Flight flight = await ApiClientFactory.Instance.GetFlight(flightNo);
             await ApiClientFactory.Instance.PutFlight(flightNo, flight);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("FlyDetails", "Home", new { extraPrice = fly.getCost(), description = fly.getDescription(), ticketPrice = basePrice, user = username });
         }
 
         public IActionResult Privacy()
