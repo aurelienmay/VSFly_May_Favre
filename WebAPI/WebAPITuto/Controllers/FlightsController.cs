@@ -69,6 +69,39 @@ namespace WebAPITuto.Controllers
             return flight;
         }
 
+        // PUT: api/Flights/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutFlight(long id, Flight flight)
+        {
+            if (id != flight.FlightNo)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(flight).State = EntityState.Modified;
+
+            //try
+            //{
+                await _context.SaveChangesAsync();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!TodoItemExists(id))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
+
+            return NoContent();
+        }
+
+
         //// PUT: api/ToDoItems/5
         //// To protect from overposting attacks, enable the specific properties you want to bind to, for
         //// more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
