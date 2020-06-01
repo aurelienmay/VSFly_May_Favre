@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using EFCoreApp2020;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WebAPITuto.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebAPITuto.Controllers
 {
