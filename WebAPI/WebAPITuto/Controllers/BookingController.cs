@@ -36,8 +36,6 @@ namespace WebAPITuto.Controllers
             float totalprice = 0;
             using (var ctx = new VSFlightContext())
             {
-                // Linq
-                // needs using System.Linq;
                 var q = from f in ctx.Booking
                         where f.FlightNo == id
                         select f;
@@ -74,6 +72,39 @@ namespace WebAPITuto.Controllers
                 average /= sum;
 
                 return "The average price for the destination " + destination +" is: " + average+" CHF";
+            }
+        }
+
+        // GET: api/Booking/average/1
+        [HttpGet("List/{destination}")]
+        public string GetListOfFlightByDestAndUser(string destination)
+        {
+            string result="";
+            using (var ctx = new VSFlightContext())
+            {
+                // Linq
+                // needs using System.Linq;
+                var q = from f in ctx.Booking
+                        join g in ctx.FlightSet on f.FlightNo equals g.FlightNo
+                        join h in ctx.Passenger on f.PassengerID equals h.PassengerID
+                        where g.Destination == destination
+                        select f;
+
+                
+                foreach (Booking f in q)
+                {
+                 string username = "";
+                 var r = from p in ctx.Passenger
+                            join b in ctx.Booking on p.PassengerID equals b.PassengerID
+                            where f.PassengerID == p.PassengerID
+                            select p;
+                    foreach(Passenger p in r)
+                    {
+                        username = p.Username;
+                    }
+                    result += "Le numéro de passager: " + f.PassengerID + " Le nom d'utilisateur: " + username + " Le numéro de réservation: " + f.BookingID + " Le prix du vol: " + f.TicketPrice + "\n";
+                }
+                return result;
             }
         }
 

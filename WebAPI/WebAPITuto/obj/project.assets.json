@@ -8549,23 +8549,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aurel\\.nuget\\packages\\": {},
+    "C:\\Users\\leo10\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\WebAPITuto\\WebAPITuto.csproj",
+      "projectUniqueName": "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\WebAPITuto\\WebAPITuto.csproj",
       "projectName": "WebAPITuto",
-      "projectPath": "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\WebAPITuto\\WebAPITuto.csproj",
-      "packagesPath": "C:\\Users\\aurel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\WebAPITuto\\obj\\",
+      "projectPath": "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\WebAPITuto\\WebAPITuto.csproj",
+      "packagesPath": "C:\\Users\\leo10\\.nuget\\packages\\",
+      "outputPath": "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\WebAPITuto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\aurel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leo10\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8578,8 +8578,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj": {
-              "projectPath": "C:\\Users\\aurel\\Source\\Repos\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj"
+            "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj": {
+              "projectPath": "D:\\1_HES\\Comp&Pattern\\VSFly_May_Favre\\WebAPI\\EFCoreApp2020\\EFCoreApp2020.csproj"
             }
           }
         }
