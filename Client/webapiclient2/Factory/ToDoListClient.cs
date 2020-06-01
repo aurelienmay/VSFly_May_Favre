@@ -37,13 +37,11 @@ namespace webapiclient2
             return await PostAsync<Booking>(requestUrl, booking);
         }
 
-        public async Task PutFlight(int id, Flight flight)
+        public async Task<Message<Flight>> PutFlight(int id, Flight flight)
         {
             var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
-                "Flight/" + id));
-            await PutAsync<Flight>(requestUrl, flight);
-
-            //return null;
+                "Flights/" + id));
+            return await PutAsync<Flight>(requestUrl, flight);
         }
 
 

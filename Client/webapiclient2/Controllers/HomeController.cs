@@ -71,9 +71,8 @@ namespace webapiclient2.Controllers
 
             await ApiClientFactory.Instance.SaveBooking(booking);
 
-            // -1 in available seats
+            // DO THE PUT ACTION IN FLIGHT (-1 in available seats)
             Flight flight = await ApiClientFactory.Instance.GetFlight(flightNo);
-            flight.AvailableSeats--;
             await ApiClientFactory.Instance.PutFlight(flightNo, flight);
 
             return RedirectToAction("Index", "Home");

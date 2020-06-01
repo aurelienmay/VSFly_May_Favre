@@ -56,13 +56,12 @@ namespace webapiclient2
         }
 
         /// PUT
-        private async Task<T> PutAsync<T>(Uri requestUrl, T content)
+        private async Task<Message<T>> PutAsync<T>(Uri requestUrl, T content)
         {
-            //_httpClient.BaseAddress = new Uri("https://localhost:44378/");
             var response = await _httpClient.PutAsync(requestUrl.ToString(), CreateHttpContent<T>(content));
             response.EnsureSuccessStatusCode();
             var data = await response.Content.ReadAsStringAsync();
-            return default(T);
+            return JsonConvert.DeserializeObject<Message<T>>(data);
         }
 
         private Uri CreateRequestUri(string relativePath, string queryString = "")
