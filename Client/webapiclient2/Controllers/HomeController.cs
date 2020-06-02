@@ -42,9 +42,9 @@ namespace webapiclient2.Controllers
 
             List<SelectListItem> ObjList = new List<SelectListItem>()
             {
-                new SelectListItem { Text = "Second", Value = "1" },
-                new SelectListItem { Text = "Business", Value = "2" },
-                new SelectListItem { Text = "First", Value = "3" },
+                new SelectListItem { Text = "Second + CHF 0.-", Value = "1" },
+                new SelectListItem { Text = "Business + CHF 50.-", Value = "2" },
+                new SelectListItem { Text = "First + CHF 100.-", Value = "3" },
             };
             //Assigning generic list to ViewBag
             ViewBag.Locations = ObjList;
