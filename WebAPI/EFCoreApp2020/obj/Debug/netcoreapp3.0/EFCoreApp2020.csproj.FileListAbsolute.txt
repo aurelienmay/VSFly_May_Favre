@@ -194,3 +194,4 @@ D:\1_HES\Comp&Pattern\VSFly_May_Favre\WebAPI\EFCoreApp2020\obj\Debug\netcoreapp3
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\WebAPI\EFCoreApp2020\obj\Debug\netcoreapp3.0\EFCoreApp2020.dll
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\WebAPI\EFCoreApp2020\obj\Debug\netcoreapp3.0\EFCoreApp2020.pdb
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\WebAPI\EFCoreApp2020\obj\Debug\netcoreapp3.0\EFCoreApp2020.genruntimeconfig.cache
+C:\Users\aurel\Source\Repos\VSFly_May_Favre\WebAPI\EFCoreApp2020\obj\Debug\netcoreapp3.0\EFCoreApp2020.csprojAssemblyReference.cache
