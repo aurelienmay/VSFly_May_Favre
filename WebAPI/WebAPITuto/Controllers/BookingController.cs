@@ -102,7 +102,7 @@ namespace WebAPITuto.Controllers
                     {
                         username = p.Username;
                     }
-                    result += "Le numéro de passager: " + f.PassengerID + " Le nom d'utilisateur: " + username + " Le numéro de réservation: " + f.BookingID + " Le prix du vol: " + f.TicketPrice + "\n";
+                    result += "Le numéro de passager: " + f.PassengerID + " | Le nom d'utilisateur: " + username + " | Le numéro de réservation: " + f.BookingID + " | Le prix du vol: " + f.TicketPrice + "\n";
                 }
                 return result;
             }
@@ -117,12 +117,6 @@ namespace WebAPITuto.Controllers
 
             return null;
         }
-
-        //// POST: api/Booking
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
 
         // PUT: api/Booking/5
         [HttpPut("{id}")]
