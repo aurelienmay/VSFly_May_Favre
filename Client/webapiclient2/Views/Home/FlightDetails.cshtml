@@ -55,8 +55,24 @@
 </div>
 <div>
     <div>
-        @using (Html.BeginForm("BookThisFlight", "Home", new { flightNo = Model.FlightNo, basePrice = Model.BasePrice }, FormMethod.Post))
+        @using (Html.BeginForm("BookThisFlight", "Home", new { flightNo = Model.FlightNo, basePrice = Model.BasePrice, flightClass = "first" }, FormMethod.Post))
         {
+            // Flight type
+            @Html.DropDownList("ObjList", (IEnumerable<SelectListItem>)ViewBag.Locations, new { style = "width: 305px;" })
+            <br />
+
+            // Extras
+            @Html.CheckBox("luggage")
+            <text> Luggage - CHF 40.-</text>
+            <br />
+            @Html.CheckBox("meal")
+            <text> Meal - CHF 20.-</text>
+            <br />
+            @Html.CheckBox("tv")
+            <text> TV - CHF 10.-</text>
+            <br />
+            <br />
+            // Error message for username
             @if (@ViewBag.ErrorMessage == "invalidUsername")
             {
                 <b style="color:red">@Html.Label("*Enter a valid username*")</b>
