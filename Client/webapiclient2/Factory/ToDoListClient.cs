@@ -43,19 +43,5 @@ namespace webapiclient2
                 "Flights/" + id));
             return await PutAsync<Flight>(requestUrl, flight);
         }
-
-
-        public async Task<List<TodoItem>> GetTodoItems()
-        {
-            var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
-                "TodoItems/"));
-            return await GetAsync<List<TodoItem>>(requestUrl);
-        }
-        public async Task<Message<TodoItem>> SaveTodoItem(TodoItem model)
-        {
-            var requestUrl = CreateRequestUri(string.Format(System.Globalization.CultureInfo.InvariantCulture,
-                "TodoItems/"));
-            return await PostAsync<TodoItem>(requestUrl, model);
-        }
     }
 }
