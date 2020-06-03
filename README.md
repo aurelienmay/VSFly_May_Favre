@@ -13,9 +13,11 @@ Just unzip the zip and open the two solutions files (.sln) in Visual Studio.
 
 ## Usage
 
-You can launch the WEPApi first (EFCoreApp2020.sln) and then the Client (webapiclient2.sln).
+You can open the two solution on two Visual Studio windows. You have an already created database at your disposal, **however the paths do not match (connection string).**
+To test it, launch the WEPApi first (EFCoreApp2020.sln) and then the Client (webapiclient2.sln).
+Then it's up to you to travel ;)
 
-## Datas available for test
+## Datas available for test (data from the db in the "DATABASE" folder)
 ### Table Passenger
 
 | UID  | Username |
@@ -23,20 +25,3 @@ You can launch the WEPApi first (EFCoreApp2020.sln) and then the Client (webapic
 | 1  | aurelienmay  |
 | 2  | leonardfavre  |
 | 3  | toto  |
-
-Data status as at 24.05.2020. The data is subject to any changes made by the user or by the web service.
-
-
-## Known bug
-### No listening endpoint on localhost
-#### Problem
-
-An error may occur when executing an operation in Windows Form. The error is of type "No listening endpoint on localhost". A temporary solution was to simply remove the "ServiceReferencePayment" service from the connected services and add it again with exactly the same name to resolve this error. But it was a major bug and we found a better solution
-
-#### Solution
-
-The solution implemented is to set the WCF Service to start at the same time as the Windows Form. For that, the settings "Set startup projects" has been updated to choose multiple startup projects so now the WCF Service is running in background to make sur the connection to the webservice is available.
-
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
