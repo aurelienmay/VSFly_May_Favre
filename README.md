@@ -3,7 +3,7 @@
 ![Technology](https://img.shields.io/badge/technology-.NET%20Framework%204.7.2-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-# BerclazMayITSM
+# VSFly - Aurélien May & Léonard Favre
 
 This project was carried out as part of the "634-1 COMP. & PATTERN" module.
 
