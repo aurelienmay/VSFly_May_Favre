@@ -102,7 +102,7 @@ namespace WebAPITuto.Controllers
                     {
                         username = p.Username;
                     }
-                    result += "Le numéro de passager: " + f.PassengerID + " | Le nom d'utilisateur: " + username + " | Le numéro de réservation: " + f.BookingID + " | Le prix du vol: " + f.TicketPrice + "\n";
+                    result += "Le numéro de passager: " + f.PassengerID + "\n\tLe nom d'utilisateur: " + username + "\n\tLe numéro de réservation: " + f.BookingID + "\n\tLe prix du vol: " + f.TicketPrice + "\n";
                 }
                 return result;
             }
