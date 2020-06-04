@@ -24,7 +24,7 @@ namespace EFCoreApp2020
 
             //CreateDatabase();
 
-            //NewFlights(); // create the flight n° 1 + n° 2 + n° 3
+            NewFlights(); // create the flight n° 1 + n° 2 + n° 3
 
             //PrintFlights();
 

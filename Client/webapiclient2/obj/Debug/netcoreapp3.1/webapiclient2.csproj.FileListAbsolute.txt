@@ -327,9 +327,7 @@ C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netco
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.dll
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.pdb
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.genruntimeconfig.cache
-C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index_ORI.cshtml.g.cs
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\FlightDetails.cshtml.g.cs
-C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.csprojAssemblyReference.cache
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\bin\Debug\netcoreapp3.1\appsettings.json
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -425,6 +423,7 @@ D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.TagHelpers.output.cache
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.RazorCoreGenerate.cache
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\FlightDetails.cshtml.g.cs
+D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\FlyDetails.cshtml.g.cs
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index_ORI.cshtml.g.cs
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
@@ -443,4 +442,4 @@ D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.pdb
 D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.genruntimeconfig.cache
 C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\TicketDetails.cshtml.g.cs
-D:\1_HES\Comp&Pattern\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\Razor\Views\Home\TicketDetails.cshtml.g.cs
+C:\Users\aurel\source\repos\VSFly_May_Favre\Client\webapiclient2\obj\Debug\netcoreapp3.1\webapiclient2.csprojAssemblyReference.cache
